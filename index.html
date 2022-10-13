@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación del DOM básica - Curso Práctico de JavaScript</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #ffefd5;
+        }
+        h1{
+            text-align: center;
+            border-bottom: 1px solid #222;
+            padding-bottom: 15px;
+        }
+        .operations{
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            gap: 10px;
+        }
+        .operations button{
+            border: 1px solid #333;
+            background: #444;
+            transition: background ease-in .3s;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .operations button:hover{
+            background: #333;
+            transition: background ease-in .3s;
+        }
+        .operations button:active{
+            background-color: red;
+            font-size: 10px;
+        }
+        .operador{
+            display: inline;
+            font-size: 20px;
+        }
+        .input{
+            border-radius: 3px;
+            border: 1px solid #856634;
+            width: 60px;
+            padding: 4px;
+            background-color: #ffefd5;
+        }
+        .input::placeholder{
+            font-family: monospace;
+            
+        }
+        #btnCalcular{
+            cursor: pointer;
+            background-color: #7B9F7D;
+            border-radius: 4px;
+            transition: background ease-in .3s;
+        }
+        #btnCalcular:hover{
+            background-color: #4A856C;
+            color:#ffefd5;
+            transition: background ease-in .3s;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipulación básica del DOM </h1>
+    <main>
+        <section class="operations">
+            <button id="btn-suma">Suma</button>
+            <button id="btn-resta">Resta</button>
+            <button id="btn-multiplicacion">Multiplicación</button>
+            <button id="btn-division">División</button>
+            <button id="btn-modulo">Modulo o Resto</button>
+        </section>
+       
+            <h3>Calculadora: <b class="calcType"></b> </h3>
+         
+                <form id="form">
+                    <input  class="input"id="calculo1"  placeholder="Valor 1">
+                    <p class="operador"></p>
+                    <input  class="input"id="calculo2" placeholder="Valor 2">
+    
+                    <button id="btnCalcular">Calcular</button>
+                    <p>Resultado: <b class="result"></b></p>
+                </form>
+            <script src="./script.js"></script>
+    </main>
+</body>
+</html>
